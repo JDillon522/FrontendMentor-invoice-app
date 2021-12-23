@@ -4,16 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin: 4rem 0;
 }
 
 section {
     width: $main-container-width-pct;
     max-width: $main-container-width-px;
-}
 
-.buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,6 +31,9 @@ section {
         display: flex;
         flex-direction: column;
 
+        > label {
+            margin: auto;
+        }
         &.dark {
             background-color: $dark-bg;
         }

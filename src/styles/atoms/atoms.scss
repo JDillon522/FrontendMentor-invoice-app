@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import './typography.scss';
+@import './button.scss';
+@import './formElements.scss';
+
+html, body {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    font-family: $font-family;
+    background-color: $light-bg;
+    color: $primary-font-color;
+    font-size: $base-font-size;
+}
+

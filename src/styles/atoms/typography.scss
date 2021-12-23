@@ -1,0 +1,64 @@
+@import '../variables.scss';
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.63px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+p, .body1 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.body2 {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.23px;
+}
+
+label,
+.subheading {
+    color: $sub-header-font-color;
+}
+
+label {
+    font-size: $label-font-size;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.error {
+    color: $red;
+}
+
+.dark-theme {
+    background-color: $dark-bg;
+    color: $white-font;
+}
