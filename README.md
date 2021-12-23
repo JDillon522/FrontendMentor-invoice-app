@@ -1,27 +1,71 @@
-# InvoiceApp
+# Frontend Mentor - Invoice app solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+This is a solution to the [Invoice app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/invoice-app-i7KaLTQjl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Code scaffolding
+## Overview
+After getting frustrated playing with Web Components and subsequently throwing in the towel I decided to prove that I am actually pretty good at this web-dev thing and chose to jump to a complex Guru level project.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+My goal is to build out the client side with mock data and then integrate a Nest.js api that I'll deploy on Heroku.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### The challenge
 
-## Running unit tests
+Users should be able to:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Create, read, update, and delete invoices
+- Receive form validations when trying to create/edit an invoice
+- Save draft invoices, and mark pending invoices as paid
+- Filter invoices by status (draft/pending/paid)
+- Toggle light and dark mode
+- ~~**Bonus**: Keep track of any changes, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)~~
+- **Bonus**: Preserve state via a Nest.js API and postgres DB
 
-## Running end-to-end tests
+### Screenshot
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+TODO
 
-## Further help
+![](./screenshot.jpg)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+### Links
+
+- Solution URL: [Github](https://github.com/JDillon522/FrontendMentor-invoice-app)
+- Live Site URL: [Github Pages: TODO]()
+
+## My process
+
+- I started off by building a kitchen-sink page that has the design system laid out. Here I could see all (or most) of the different elements and knock out the layouts quickly.
+
+**TODO**
+- Once the design system is place I'll implement the layout and UI for the home page initially with some static data.
+- I'll then integrate the dummy json data via a mock service
+- From there its a matter of tons of form validation, routing, components, etc
+
+
+### Built with
+
+- **Angular**
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+
+### What I learned
+
+I'm still pretty damn good with Angular.
