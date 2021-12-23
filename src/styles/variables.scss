@@ -1,0 +1,33 @@
+// Colors
+$primary-blue: #7C5DFA;
+$secondary-blue: #9277FF;
+$primary-dark-blue: #1E2139;
+$secondary-dark-blue: #252945;
+$secondary-btn-background: #373B53;
+$lite-gray: #DFE3FA;
+$medium-gray: #F9FAFE;
+$gray: #888EB0;
+$blue-gray: #7E88C3;
+$black: #0C0E16;
+$red: #EC5757;
+$pink: #FF9797;
+$light-bg: #F8F8FB;
+$dark-bg: #141625;
+$white-font: #FFFFFF;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+$font-family: 'Spartan', sans-serif;
+$primary-font-color: $black;
+$secondary-font-color: $gray;
+$sub-header-font-color: $blue-gray;
+$base-font-size: 12px;
+$label-font-size: 12px;
+
+// Layouts
+$main-container-width-px: 1110px;
+$main-container-width-pct: 80%;
+
+
+// Animations
+$base-transition: all .25s ease-in;
