@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+<div class="container" [ngClass]="{'dark-theme': theme === 'dark-theme'}">
+    <app-nav></app-nav>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

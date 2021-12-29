@@ -13,3 +13,17 @@ html, body {
     font-size: $base-font-size;
 }
 
+main {
+    max-width: 730px;
+    width: 65%;
+    margin: 100px auto;
+    transition: $base-transition;
+
+}
+
+@media screen and (min-width: $tablet-max-width) {
+    main {
+        margin: auto;
+    }
+}
+

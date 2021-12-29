@@ -1,0 +1,18 @@
+<nav>
+    <div class="icon">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <img src="../../../assets/logo.svg" alt="Logo">
+    </div>
+
+    <div class="actions">
+        <button *ngIf="currentTheme === 'light-theme'" (click)="toggle('dark-theme')">
+            <img src="../../../assets/svg/icon-moon.svg" alt="Switch to dark theme">
+        </button>
+        <button *ngIf="currentTheme === 'dark-theme'" (click)="toggle('light-theme')">
+            <img src="../../../assets/svg/icon-sun.svg" alt="Switch to light theme">
+        </button>
+        <div class="border vert"></div>
+        <img class="avatar" src="../../../assets/image-avatar.jpg" alt="Avatar">
+    </div>
+</nav>

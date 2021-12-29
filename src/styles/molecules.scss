@@ -1,5 +1,26 @@
 @import './variables.scss';
 
+.border {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+    background-color: $border-color;
+
+    &.vert {
+        width: 1px;
+        height: 100%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $tablet-max-width) {
+        &.vert {
+            width: 100%;
+            height: 1px;
+            margin: 24px 0;
+        }
+    }
+}
+
 .form-group {
     display: flex;
     flex-direction: row;

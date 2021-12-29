@@ -1,0 +1,114 @@
+@import '../../../styles/variables.scss';
+
+:host {
+    position: fixed;
+    width: 100%;
+    background-color: $secondary-btn-background;
+    top: 0;
+}
+
+nav {
+    height: $nav-mobile-width-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .icon {
+        height: $nav-mobile-width-height;
+        width: $nav-mobile-width-height;
+
+        .top {
+            background-color: $primary-blue;
+            border-radius: 0 20px 0 0;
+            height: 55px;
+        }
+        .bottom {
+            background-color: $secondary-blue;
+            border-radius: 20px 0;
+            height: 40px;
+            margin-top: -15px;
+        }
+
+        img {
+            position: fixed;
+            top: 25px;
+            left: 25px;
+            width: 32px;
+        }
+    }
+
+    .actions {
+        height: $nav-mobile-width-height;
+
+        display: flex;
+        flex-direction: row;
+
+        .avatar {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            margin: 24px 32px;
+        }
+
+        button {
+            background-color: transparent;
+            margin: auto 32px;
+            border-radius: 0;
+            width: 100%;
+
+            img {
+                width: 20px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-max-width) {
+    :host {
+        height: 100%;
+        width: unset;
+        border-radius: 0 20px 20px 0;
+    }
+
+    nav {
+        height: 100%;
+        flex-direction: column;
+
+        .icon {
+            height: $nav-width-height;
+            width: $nav-width-height;
+
+            .top {
+                height: 65px;
+            }
+
+            .bottom {
+                height: 50px;
+                margin-top: -15px;
+            }
+
+            img {
+                top: 35px;
+                left: 30px;
+            }
+        }
+
+        .actions {
+            height: 117px;
+            margin-bottom: 24px;
+            flex-direction: column;
+
+            .avatar {
+                margin: auto;
+                width: 40px;
+                height: 40px;
+
+            }
+
+            button {
+                margin: auto;
+            }
+        }
+    }
+}
