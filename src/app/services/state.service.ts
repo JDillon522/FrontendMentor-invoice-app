@@ -25,4 +25,9 @@ export class StateService {
     this.state.theme = theme;
     this.$state.next(this.state);
   }
+
+  public toggleDrawer(): void {
+    this.state.drawerOpen = !this.state.drawerOpen;
+    this.$state.next(this.state);
+  }
 }

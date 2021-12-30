@@ -1,0 +1,48 @@
+@import '../../../styles/variables.scss';
+
+aside {
+    left: -100vw;
+    width: 100%;
+    max-width: 616px;
+    padding: 2rem;
+    transition: $base-transition;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    top: $nav-mobile-width-height;
+    overflow-x: hidden;
+
+    &.dark-theme {
+        background-color: $dark-bg;
+    }
+
+    &.light-theme {
+        background-color: $light-bg;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+@media screen and (min-width: $tablet-max-width) {
+    aside {
+        top: 0;
+    }
+}
+
+.open {
+    left: 0;
+    height: calc(100vh - #{$nav-mobile-width-height});
+}
+
+@media screen and (min-width: $tablet-max-width) {
+    .open {
+        left: 100px;
+        top: 0;
+        height: 100%;
+    }
+}
+
+

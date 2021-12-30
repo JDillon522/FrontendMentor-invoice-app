@@ -1,7 +1,11 @@
 <div class="container" [ngClass]="{'dark-theme': theme === 'dark-theme'}">
     <app-nav></app-nav>
+    <app-edit-dialog></app-edit-dialog>
 
-    <main>
-        <router-outlet></router-outlet>
-    </main>
+    <div class="drawer-overlap" [ngClass]="{'open': drawerOpen}">
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+
+    </div>
 </div>

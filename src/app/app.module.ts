@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { IconComponent } from './components/icon/icon.component';
 import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.component';
 import { NavComponent } from './components/nav/nav.component';
+import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IconComponent,
     KitchenSinkComponent,
-    NavComponent
+    NavComponent,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from 'src/app/services/state.service';
 
 @Component({
   selector: 'app-kitchen-sink',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KitchenSinkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private state: StateService) { }
 
   ngOnInit(): void {
+  }
+
+  public openDrawer(): void {
+    this.state.toggleDrawer();
   }
 
 }

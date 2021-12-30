@@ -3,3 +3,19 @@
 .container {
     transition: $base-transition;
 }
+
+
+.drawer-overlap {
+    margin: auto;
+    transition: $base-transition;
+
+    &.open {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media screen and (min-width: $tablet-max-width) {
+    .drawer-overlap {
+        margin-left: 100px;
+    }
+}
