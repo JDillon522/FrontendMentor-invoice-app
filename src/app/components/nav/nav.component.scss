@@ -17,6 +17,7 @@ nav {
     .icon {
         height: $nav-mobile-width-height;
         width: $nav-mobile-width-height;
+        cursor: pointer;
 
         .top {
             background-color: $primary-blue;

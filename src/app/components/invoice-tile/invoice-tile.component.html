@@ -1,0 +1,26 @@
+<section class="tile" [class]="theme">
+    <div class="info">
+        <p class="id">{{invoice.id}}</p>
+
+        <p class="date">Due {{invoice.paymentDue | date:'d LLL yyyy'}}</p>
+
+        <p class="name desktop">{{invoice.clientName}}</p>
+
+        <h3 class="total">
+            <span>{{invoice.total | currency}}</span>
+        </h3>
+    </div>
+
+    <div class="cta">
+        <p class="name mobile">{{invoice.clientName}}</p>
+
+        <div class="status" [class]="invoice.status">
+
+            {{invoice.status | titlecase}}
+        </div>
+
+        <button>
+            <img src="../../../assets/svg/icon-arrow-right.svg" alt="View Details" title="View Details">
+        </button>
+    </div>
+</section>

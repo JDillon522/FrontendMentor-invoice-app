@@ -1,0 +1,139 @@
+@import '../../../styles/variables.scss';
+
+.tile {
+    display: flex;
+    min-height: 72px;
+    margin: 2rem 0;
+    background-color: $white-font;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 1rem;
+    transition: $base-transition;
+    border: 1px solid transparent;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+
+    &:hover {
+        border: 1px solid $primary-blue;
+    }
+
+    .info,
+    .cta {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    p, h3 {
+        margin: 0;
+    }
+
+    @media screen and (max-width: $mobile-max-width) {
+        height: 85px;
+
+        .info, .cta {
+            flex-direction: column;
+        }
+    }
+
+    .info {
+        width: 78%;
+        justify-content: space-around;
+    }
+    .cta {
+        width: 20%;
+        min-width: 145px;
+    }
+
+    .id {
+        font-weight: 700;
+
+        &::before {
+            content: '#';
+            font-weight: 400;
+            color: $secondary-font-color;
+        }
+    }
+
+    .date, .name {
+        color: $secondary-font-color;
+    }
+
+    .date {
+        @media screen and (max-width: $mobile-max-width) {
+            margin-top: auto;
+            margin-bottom: 1rem;
+        }
+    }
+    .mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: $mobile-max-width) {
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: block;
+        }
+    }
+
+    .total {
+        font-weight: 700;
+        text-align: right;
+        min-width: 70px;
+    }
+
+    .status {
+        width: 104px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        border-radius: 6px;
+
+        &.paid {
+            background-color: rgba(51, 214, 159, 0.06);
+            color: #33D69F;
+        }
+        &.pending {
+            background-color: rgba(255, 143, 0, 0.06);
+            color: #FF8F00;
+        }
+        &.draft {
+            background-color: rgba(55, 59, 83, 0.06);
+            color: #373B53;
+        }
+
+        @media screen and (max-width: $mobile-max-width) {
+            margin-top: auto;
+        }
+    }
+
+    button {
+        width: 40px;
+        background-color: transparent;
+        // margin-right: -2rem;
+    }
+
+    @media screen and (max-width: $mobile-max-width) {
+        button {
+            display: none;
+        }
+    }
+
+    &.dark-theme {
+        background-color: $secondary-btn-background;
+        .date, .name {
+            color: $white-font;
+        }
+
+        .draft {
+            background-color: rgba(223, 227, 250, 0.06);
+            color: #DFE3FA;
+        }
+    }
+}
+
+
