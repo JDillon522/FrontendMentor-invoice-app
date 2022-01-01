@@ -9,6 +9,7 @@ import { InvoiceService } from 'src/app/services/invoice.service';
 })
 export class InvoiceListComponent implements OnInit {
   public invoices: IInvoice[] = [];
+  public filter = 'total';
 
   constructor(
     private invoiceService: InvoiceService

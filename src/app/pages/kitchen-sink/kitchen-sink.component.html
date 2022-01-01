@@ -107,6 +107,20 @@
     </div>
 
     <div class="group">
+        <form [formGroup]="selectForm">
+
+            <div class="form-group">
+                <label for="appSelect">Dropdown Select</label>
+                <input [appDropdownTriggerFor]="dropdown" id="appSelect" class="select-icon" formControlName="select">
+                <app-select #dropdown class="randomClass" [selectForm]="selectForm" selectControlName="select">
+                    <option>one</option>
+                    <option>two</option>
+                </app-select>
+
+            </div>
+        </form>
+    </div>
+    <div class="group">
         <label>Datepicker Fields</label>
 
         <div class="form-group">

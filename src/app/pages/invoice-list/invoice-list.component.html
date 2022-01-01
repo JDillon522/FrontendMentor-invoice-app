@@ -1,1 +1,16 @@
+<header>
+    <div class="total">
+        <h1>Invoices</h1>
+        <p>There are {{invoices.length}} {{filter}} invoices.</p>
+    </div>
+
+    <div class="actions">
+
+        <button class="primary icon sm">
+            <app-icon name="icon-plus"></app-icon>New Invoice
+        </button>
+    </div>
+</header>
+
+
 <app-invoice-tile *ngFor="let invoice of invoices" [invoice]="invoice"></app-invoice-tile>

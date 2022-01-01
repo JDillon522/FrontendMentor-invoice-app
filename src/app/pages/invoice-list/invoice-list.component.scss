@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+
+    .total {
+        h1 {
+            margin-bottom: 1rem;
+        }
+        p {
+            color: $secondary-font-color;
+        }
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button {
+            margin-left: 2rem;
+        }
+
+        &.desktop {
+            @media screen and (max-width: $mobile-max-width) {
+                display: none;
+            }
+        }
+        &.mobile {
+
+            button {
+                width: 90px;
+            }
+
+            @media screen and (min-width: $mobile-max-width) {
+                display: none;
+            }
+        }
+    }
+}

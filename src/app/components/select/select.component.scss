@@ -1,0 +1,32 @@
+@import '../../../styles/variables.scss';
+
+.dropdown-content {
+  width: 100%;
+  border-radius: 6px;
+
+  &.light-theme {
+    box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+    background-color: $light-bg;
+  }
+  &.dark-theme {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+::ng-deep {
+  option {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid $lite-gray;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+}

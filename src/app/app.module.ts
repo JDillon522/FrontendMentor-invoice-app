@@ -11,6 +11,11 @@ import { InvoiceListComponent } from './pages/invoice-list/invoice-list.componen
 import { InvoiceTileComponent } from './components/invoice-tile/invoice-tile.component';
 import { StateService } from './services/state.service';
 import { InvoiceService } from './services/invoice.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectComponent } from './components/select/select.component';
+import {OverlayModule} from '@angular/cdk/overlay';
+import { DropdownDirective } from './directives/dropdown.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +25,17 @@ import { InvoiceService } from './services/invoice.service';
     NavComponent,
     EditDialogComponent,
     InvoiceListComponent,
-    InvoiceTileComponent
+    InvoiceTileComponent,
+    SelectComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    BrowserAnimationsModule,
+    OverlayModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [StateService, InvoiceService],
   bootstrap: [AppComponent]

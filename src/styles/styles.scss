@@ -1,3 +1,5 @@
 @use './variables.scss';
 @use './atoms/atoms.scss';
 @use './molecules.scss';
+
+@import '@angular/cdk/overlay-prebuilt.css';
