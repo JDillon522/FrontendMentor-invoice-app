@@ -16,6 +16,8 @@ import { SelectComponent } from './components/select/select.component';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { DropdownDirective } from './directives/dropdown.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InvoiceListComponent,
     InvoiceTileComponent,
     SelectComponent,
-    DropdownDirective
+    DropdownDirective,
+    MenuComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,

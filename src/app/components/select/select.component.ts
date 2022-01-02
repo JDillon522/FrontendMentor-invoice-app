@@ -12,7 +12,7 @@ import { StateService } from 'src/app/services/state.service';
 })
 export class SelectComponent implements DropdownPanel {
   @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
-  @Output() closed = new EventEmitter<string>();
+  @Output() closed = new EventEmitter<string | null>();
 
   @Input() selectForm: FormGroup;
   @Input() selectControlName: string;

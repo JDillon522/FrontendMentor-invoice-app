@@ -1,10 +1,25 @@
 <header>
     <div class="total">
         <h1>Invoices</h1>
-        <p>There are {{invoices.length}} {{filter}} invoices.</p>
+        <p *ngIf="filteredInvoices.length">There are {{filteredInvoices.length}} {{filter}} invoices.</p>
+        <p *ngIf="!filteredInvoices.length">No invoices.</p>
     </div>
 
     <div class="actions">
+        <form [formGroup]="filterForm">
+            <button [appDropdownTriggerFor]="menu" class="menu sm">Filter by Status</button>
+            <app-menu #menu >
+                <app-checkbox id="draft" formControlName="draft">
+                    Draft
+                </app-checkbox>
+                <app-checkbox id="pending" formControlName="pending">
+                    Pending
+                </app-checkbox>
+                <app-checkbox id="paid" formControlName="paid">
+                    Paid
+                </app-checkbox>
+            </app-menu>
+        </form>
 
         <button class="primary icon sm">
             <app-icon name="icon-plus"></app-icon>New Invoice
@@ -13,4 +28,10 @@
 </header>
 
 
-<app-invoice-tile *ngFor="let invoice of invoices" [invoice]="invoice"></app-invoice-tile>
+<app-invoice-tile *ngFor="let invoice of filteredInvoices" [invoice]="invoice"></app-invoice-tile>
+
+<section class="no-invoices" *ngIf="!filteredInvoices.length">
+    <img src="../../../assets/svg/illustration-empty.svg" alt="No invoices">
+    <h3>There is nothing here</h3>
+    <p>Create an invoice by clicking the <b>New Invoice</b> button and get started</p>
+</section>

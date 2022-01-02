@@ -1,0 +1,12 @@
+<div class="checkbox-group" [class]="($state | async)?.theme">
+    <label class="custom-input">
+        <input type="checkbox"
+            [name]="id"
+            [id]="id"
+            [checked]="checked">
+        <span></span>
+    </label>
+    <label [for]="id" (click)="toggleCheck()">
+        <ng-content></ng-content>
+    </label>
+</div>

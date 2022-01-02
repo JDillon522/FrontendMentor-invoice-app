@@ -5,7 +5,7 @@ import { merge, Observable, Subscription } from 'rxjs';
 
 export interface DropdownPanel {
   templateRef: TemplateRef<any>;
-  readonly closed: EventEmitter<string>;
+  readonly closed: EventEmitter<string | null>;
 }
 
 @Directive({
@@ -35,7 +35,7 @@ export class DropdownDirective implements OnDestroy {
       hasBackdrop: true,
       backdropClass: 'cdk-overlay-transparent-backdrop',
       scrollStrategy: this.overlay.scrollStrategies.close(),
-      width: this.elementRef.nativeElement.getBoundingClientRect().width,
+      minWidth: this.elementRef.nativeElement.getBoundingClientRect().width,
       positionStrategy: this.overlay
         .position()
         .flexibleConnectedTo(this.elementRef)

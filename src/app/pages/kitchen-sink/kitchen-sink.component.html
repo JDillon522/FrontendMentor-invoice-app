@@ -125,8 +125,33 @@
 
         <div class="form-group">
             <label for="date">Date</label>
-            <input type="text" min="2019-01-01" name="date" placeholder="Put a date down" id="date">
+            <input type="date" min="2019-01-01" name="date" placeholder="Put a date down" id="date">
         </div>
+    </div>
+
+    <div class="group">
+        <label>Checkboxes</label>
+
+        <div class="form-group">
+            <app-checkbox id="opt1">
+                Option 1
+            </app-checkbox>
+        </div>
+    </div>
+    <div class="group">
+        <label>Menus</label>
+
+        <form [formGroup]="checkboxForm">
+            <button [appDropdownTriggerFor]="menu" class="menu sm">Filter Results</button>
+            <app-menu #menu >
+                <app-checkbox id="opt1" formControlName="opt1">
+                    Option 1
+                </app-checkbox>
+                <app-checkbox id="opt2" [checked]="true" formControlName="opt2">
+                    Option 2
+                </app-checkbox>
+            </app-menu>
+        </form>
     </div>
 </section>
 

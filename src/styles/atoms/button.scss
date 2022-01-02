@@ -68,6 +68,16 @@ button {
             background-color: $pink;
         }
     }
+    &.menu {
+        background: url('../../assets/svg/icon-arrow-down.svg') no-repeat 10px 7px;
+        background-position-x: 97%;
+        background-position-y: center;
+        color: $black;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
 }
 
 

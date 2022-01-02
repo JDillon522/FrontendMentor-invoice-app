@@ -12,13 +12,17 @@ export class KitchenSinkComponent implements OnInit {
     select: new FormControl()
   });
 
+  public checkboxForm: FormGroup = new FormGroup({
+    opt1: new FormControl(),
+    opt2: new FormControl()
+  });
+
+  public menuOptions: string[] = [];
+
   constructor(private state: StateService) { }
 
   ngOnInit(): void {
-    this.selectForm.valueChanges.subscribe(change => {
-      console.log(change);
 
-    })
   }
 
   public openDrawer(): void {

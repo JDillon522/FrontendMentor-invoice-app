@@ -1,0 +1,61 @@
+@import '../../../styles/variables.scss';
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+
+    label {
+        white-space: nowrap;
+        margin: 0;
+        color: $primary-font-color;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .custom-input {
+        span {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-color: $lite-gray;
+            margin: 0 1rem 0 0;
+            border-radius: 2px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: $base-transition;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        [type=checkbox]:checked + span {
+            background-image: url('../../../assets/svg/icon-check.svg');
+            background-color: $primary-blue;
+            background-size: 70%;
+        }
+
+        input {
+            visibility: hidden;
+            height: 0;
+            width: 0;
+            position: absolute;
+            overflow: hidden;
+        }
+    }
+
+    &:hover .custom-input span {
+        border: 1px solid $primary-blue;
+    }
+
+    &.dark-theme {
+        label {
+            color: $white-font;
+        }
+
+        .custom-input {
+            span {
+                background-color: $primary-dark-blue;
+            }
+        }
+    }
+}
+
